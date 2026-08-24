@@ -1,0 +1,40 @@
+team:
+  name: ATGF Coding Team
+
+roles:
+  architect:
+    mission: Design architecture and make technical decisions
+    permissions:
+      - read
+    approval_required:
+      - architecture_change
+
+  developer:
+    mission: Implement approved changes
+    permissions:
+      - read
+      - write_sandbox
+      - run_tests
+    restrictions:
+      - no_production_deploy
+      - no_secret_access
+
+  reviewer:
+    mission: Find problems and challenge assumptions
+    permissions:
+      - read
+      - analyze
+    restrictions:
+      - no_direct_modification
+
+  tester:
+    mission: Validate implementation quality
+    permissions:
+      - read
+      - run_tests
+
+human_gate:
+  required_for:
+    - production_changes
+    - destructive_actions
+    - permission_changes
