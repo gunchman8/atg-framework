@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f7f8ff"/>
+<text x="70" y="90" font-family="Arial" font-size="54" font-weight="700" fill="#202040">ATGF</text>
+<text x="70" y="135" font-family="Arial" font-size="28" fill="#555">Build AI Teams. Not AI Chaos.</text>
+<rect x="70" y="190" width="1060" height="120" rx="25" fill="#ffffff"/>
+<text x="110" y="245" font-family="Arial" font-size="26" fill="#333">1. Copy repository → 2. Give your goal → 3. AI creates a team plan</text>
+<rect x="70" y="370" width="220" height="180" rx="25" fill="#fff"/><text x="100" y="430" font-family="Arial" font-size="28">👤 You</text><text x="100" y="475" font-family="Arial" font-size="20">Final decision</text>
+<rect x="350" y="370" width="220" height="180" rx="25" fill="#fff"/><text x="380" y="430" font-family="Arial" font-size="24">Architect</text><text x="380" y="475" font-family="Arial" font-size="18">Plan</text>
+<rect x="630" y="370" width="220" height="180" rx="25" fill="#fff"/><text x="660" y="430" font-family="Arial" font-size="24">Developer</text><text x="660" y="475" font-family="Arial" font-size="18">Build</text>
+<rect x="910" y="370" width="220" height="180" rx="25" fill="#fff"/><text x="940" y="430" font-family="Arial" font-size="24">Reviewer</text><text x="940" y="475" font-family="Arial" font-size="18">Check</text>
+<text x="70" y="640" font-family="Arial" font-size="24" fill="#333">Capability ≠ Authority · Human approval · Provider neutral</text>
+</svg>
