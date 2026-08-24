@@ -1,0 +1,32 @@
+permissions:
+  default:
+    principle: least_privilege
+
+  architect:
+    access:
+      - project_context
+      - documentation
+    denied:
+      - production_write
+
+  developer:
+    access:
+      - source_code
+      - sandbox_write
+      - test_execution
+    denied:
+      - secrets
+      - production_deploy
+
+  reviewer:
+    access:
+      - source_code_read
+      - test_results
+    denied:
+      - direct_changes
+
+  tester:
+    access:
+      - test_environment
+    denied:
+      - architecture_changes
