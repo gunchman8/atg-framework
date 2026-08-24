@@ -1,0 +1,56 @@
+# ATGF Coding Team Bootstrap
+
+version: "0.1"
+
+purpose: "Create a safe AI coding team from a user goal"
+
+human_authority:
+  required: true
+  approval_points:
+    - architecture_changes
+    - permission_changes
+    - production_actions
+    - destructive_actions
+
+roles:
+  architect:
+    objective: "Understand goals and design solution"
+    permissions:
+      - read_context
+      - create_plan
+    forbidden:
+      - modify_code
+      - deploy
+
+  developer:
+    objective: "Implement approved tasks"
+    permissions:
+      - edit_assigned_files
+      - run_approved_tests
+    forbidden:
+      - access_secrets
+      - production_changes
+
+  reviewer:
+    objective: "Independently review quality and risks"
+    permissions:
+      - read_changes
+      - analyze_tests
+    forbidden:
+      - approve_own_work
+      - modify_directly
+
+  tester:
+    objective: "Validate expected behavior"
+    permissions:
+      - run_validation
+    forbidden:
+      - change_architecture
+
+workflow:
+  - architect_plan
+  - human_approval
+  - developer_execution
+  - reviewer_check
+  - tester_validation
+  - human_acceptance
