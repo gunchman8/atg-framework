@@ -1,0 +1,51 @@
+# ATGF Model Routing Guidance
+
+# Models are selected by role capability, not by maximum power.
+
+routing:
+
+  architect:
+    capability:
+      - reasoning
+      - system_design
+      - tradeoff_analysis
+    preferred:
+      - advanced_reasoning_model
+
+  developer:
+    capability:
+      - coding
+      - debugging
+      - implementation
+    preferred:
+      - coding_model
+
+  reviewer:
+    capability:
+      - criticism
+      - security_review
+      - quality_analysis
+    preferred:
+      - reasoning_model
+
+  tester:
+    capability:
+      - validation
+      - repetitive_checks
+    preferred:
+      - fast_reliable_model
+
+policy:
+  default_effort: balanced
+  escalation:
+    condition:
+      - complex_architecture
+      - critical_security
+      - difficult_debugging
+    action: increase_effort_with_human_approval
+
+principle:
+  - "Role first"
+  - "Permission second"
+  - "Model third"
+  - "Effort last"
