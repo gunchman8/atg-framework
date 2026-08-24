@@ -1,271 +1,174 @@
-# Agent Team Governance Framework (ATGF)
+# ATGF — Agent Team Governance Framework
 
-## Building reliable AI teams requires more than intelligent models.
+## Đừng giao cả công việc cho một AI duy nhất. Hãy xây một đội có tổ chức.
 
-AI agents are becoming increasingly capable. But when multiple agents work together, the hardest problems are no longer only about intelligence.
+AI ngày càng mạnh, nhưng một vấn đề mới xuất hiện:
 
-The real challenges are:
+- Ai chịu trách nhiệm khi AI làm sai?
+- AI nào nên lập kế hoạch?
+- AI nào nên xây dựng?
+- Ai kiểm tra lại kết quả?
+- Khi nào con người cần quyết định?
 
-- Who is responsible for what?
-- Which actions should an agent be allowed to perform?
-- How do agents exchange information without losing context?
-- When should humans approve or intervene?
-- How can we audit decisions after something goes wrong?
+**ATGF (Agent Team Governance Framework)** là framework mã nguồn mở giúp bạn tổ chức nhiều AI agent thành một đội làm việc có vai trò, quyền hạn và quy trình rõ ràng.
 
-**ATGF (Agent Team Governance Framework)** is an open framework for designing, operating, and governing multi-agent AI systems.
-
-It is provider-independent and can be adapted to different AI agent platforms.
+ATGF không tạo ra một AI mạnh hơn.
+ATGF giúp bạn sử dụng AI một cách có tổ chức hơn.
 
 ---
 
-# The Problem
+# Vấn đề hiện nay
 
-Many AI agent systems today follow this pattern:
+Cách dùng phổ biến:
 
 ```
-Give AI a goal
+Đưa yêu cầu cho AI
         |
         v
-Let it execute
+AI tự làm tất cả
 ```
 
-This works for simple tasks.
+Phù hợp với việc nhỏ.
 
-But real-world systems need more:
+Nhưng dự án thật cần:
 
 ```
-Goal
+Ý tưởng
  |
 v
-Planning
+Lập kế hoạch
  |
 v
-Execution
+Xây dựng
  |
 v
-Review
+Kiểm tra
  |
 v
-Validation
+Thử nghiệm
  |
 v
-Human approval when needed
+Con người quyết định
 ```
-
-Without governance, adding more agents can create more confusion instead of more capability.
 
 ---
 
-# The ATGF Approach
+# ATGF hoạt động như một đội làm việc
 
-ATGF treats AI agents like a professional team.
+Thay vì một AI làm mọi việc, ATGF chia thành các vai trò:
 
-A company does not ask one employee to be:
+| Vai trò | Công việc |
+|---|---|
+| 👨‍💼 Người lập kế hoạch (Architect) | Hiểu mục tiêu, thiết kế hướng đi |
+| 👨‍💻 Người xây dựng (Developer) | Thực hiện công việc được giao |
+| 🔍 Người kiểm tra (Reviewer) | Tìm lỗi và rủi ro |
+| 🧪 Người thử nghiệm (Tester) | Kiểm tra kết quả |
+| 👤 Con người | Quyết định cuối cùng |
 
-- CEO
-- developer
-- security engineer
-- accountant
-- auditor
+---
 
-at the same time.
-
-AI systems should follow the same principle.
-
-## Core Principles
+# Nguyên tắc cốt lõi
 
 ```
 Capability != Authority
 
+AI có khả năng không có nghĩa là AI có toàn quyền.
+
 Intelligence != Trust
 
+AI thông minh vẫn cần được kiểm soát.
+
 Autonomy != Unlimited Permission
-```
 
-An agent can be highly intelligent while still having limited authority.
-
----
-
-# Reference Architecture
-
-```
-                 Human Authority
-                        |
-                        v
-              Governance Layer
-                        |
-        +---------------+---------------+
-        |               |               |
-     Planner        Builder        Reviewer
-        |               |               |
-        +---------------+---------------+
-                        |
-                        v
-              Validation Layer
-                        |
-                        v
-               Execution Layer
+Tự động hóa không đồng nghĩa với bỏ kiểm soát.
 ```
 
 ---
 
-# What ATGF Provides
+# Dùng ATGF rất đơn giản
 
-## 1. Agent Role Separation
+Bạn không cần biết lập trình.
 
-Define clear responsibilities:
+Bước 1:
 
-- Planner Agent
-- Research Agent
-- Builder Agent
-- Reviewer Agent
-- Auditor Agent
-
-Each agent has a mission and boundary.
-
-## 2. Permission Governance
-
-Separate:
+Copy link repository này vào AI bạn đang dùng:
 
 ```
-What an agent can do
-        !=
-What an agent should be allowed to do
+https://github.com/gunchman8/atg-framework
 ```
 
-Examples:
+Bước 2:
 
-Observer:
-- read
-- analyze
-- report
+Nói điều bạn muốn làm.
 
-Worker:
-- modify sandbox
-- run tests
+Ví dụ:
 
-Operator:
-- high-impact actions with approval
+```
+Tôi muốn làm một app bán hàng.
+```
 
-## 3. Structured Communication
+Bước 3:
 
-Agents should exchange contracts, not uncontrolled conversations.
+AI sẽ giúp bạn:
 
-A task should contain:
-
-- objective
-- context
-- permissions
-- expected output
-- approval requirements
-
-## 4. Human Approval Gates
-
-Important actions require human control:
-
-- production deployment
-- destructive operations
-- security policy changes
-- external communication
+- tạo đội làm việc phù hợp;
+- phân chia vai trò;
+- đề xuất quyền hạn;
+- hỏi bạn trước những thay đổi quan trọng.
 
 ---
 
-# Quick Start (For Beginners)
+# Hỗ trợ nhiều nền tảng
 
-Think of ATGF like creating a small robot company.
+ATGF được thiết kế độc lập với nhà cung cấp.
 
-Step 1:
+Có thể áp dụng với:
 
-Create different workers:
-
-```
-Planner robot
-"I make plans"
-
-Builder robot
-"I build things"
-
-Reviewer robot
-"I check mistakes"
-```
-
-Step 2:
-
-Give each robot rules:
-
-```
-You may do this.
-You may not do this.
-Ask a human before this action.
-```
-
-Step 3:
-
-Let them cooperate through clear messages.
-
-That is the basic idea of an AI agent team.
+- Codex
+- Claude
+- Gemini
+- LangGraph
+- CrewAI
+- các hệ thống agent khác
 
 ---
 
-# Repository Structure
+# Dành cho ai?
 
-```
-docs/
- ├── architecture.md
- ├── agent-roles.md
- ├── permission-model.md
- ├── communication-protocol.md
- ├── context-management.md
- └── approval-gates.md
+ATGF hữu ích cho:
 
-templates/
- ├── agent-profile.yaml
- ├── task-envelope.json
- └── review-report.md
-```
-
----
-
-# Who Is ATGF For?
-
-ATGF is useful for:
-
-- AI engineers building agent systems
-- researchers exploring multi-agent workflows
-- companies deploying AI automation
-- developers using Claude, Codex, Gemini, LangGraph, CrewAI, or other agent platforms
+- người mới muốn sử dụng AI có hệ thống;
+- developer xây ứng dụng với nhiều agent;
+- đội nhóm muốn tự động hóa công việc;
+- doanh nghiệp cần kiểm soát AI automation.
 
 ---
 
 # Project Status
 
-Current version: **v0.1 Foundation**
+Version: **v0.1 Foundation**
 
-The project currently focuses on:
+Hiện tập trung vào:
 
-- governance patterns
-- architecture principles
-- reusable templates
+- agent roles;
+- permission governance;
+- workflow templates;
+- beginner-friendly onboarding.
 
-Future directions may include:
+Các hướng phát triển tiếp theo:
 
-- reference implementations
-- provider adapters
-- validation tools
-- runtime governance components
+- runtime governance;
+- validation tools;
+- provider adapters;
+- reference implementations.
 
 ---
 
-# Contributing
+# Đóng góp
 
-Ideas, discussions, and improvements are welcome.
+Mọi ý tưởng, góp ý và cải tiến đều được chào đón.
 
-Please read:
-
-- CONTRIBUTING.md
-- CODE_OF_CONDUCT.md
-
-before contributing.
+Nếu bạn thấy framework hữu ích, hãy để lại một ⭐ trên GitHub để giúp dự án tiếp cận nhiều người hơn.
 
 ---
 
