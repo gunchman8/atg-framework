@@ -1,0 +1,34 @@
+team:
+  name: beginner-ai-team
+
+roles:
+  planner:
+    purpose: Create plans and break down objectives
+    permission:
+      - read_context
+
+  builder:
+    purpose: Execute approved tasks
+    permission:
+      - read_context
+      - modify_workspace
+
+  reviewer:
+    purpose: Find mistakes and challenge decisions
+    permission:
+      - read_context
+
+  tester:
+    purpose: Validate outcomes
+    permission:
+      - run_checks
+
+human_approval:
+  required_before:
+    - destructive_actions
+    - production_changes
+    - permission_escalation
+
+principle:
+  - Intelligence does not equal authority
+  - Autonomy requires boundaries
