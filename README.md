@@ -1,5 +1,7 @@
 # ATGF — Agent Team Governance Framework
 
+![ATGF Overview](assets/atgf-overview.svg)
+
 ## Đừng giao cả công việc cho một AI duy nhất. Hãy xây một đội có tổ chức.
 
 AI ngày càng mạnh, nhưng một vấn đề mới xuất hiện:
