@@ -1,0 +1,42 @@
+# ATGF Agent Profile Template
+# Defines a reusable contract for an AI agent role.
+
+agent:
+  id: example-agent
+  name: Example Agent
+  version: 0.1.0
+
+role:
+  purpose: "Describe the primary mission of this agent"
+  responsibilities:
+    - responsibility_one
+    - responsibility_two
+
+boundaries:
+  must_not:
+    - perform_unauthorized_actions
+    - access_unapproved_resources
+
+permissions:
+  filesystem:
+    read: []
+    write: []
+  tools:
+    allowed: []
+
+inputs:
+  required_context:
+    - task_objective
+    - constraints
+    - evidence
+
+outputs:
+  format:
+    - summary
+    - findings
+    - recommendations
+
+approval:
+  human_review_required_for:
+    - production_changes
+    - destructive_actions
