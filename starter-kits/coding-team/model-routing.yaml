@@ -1,6 +1,6 @@
 # ATGF Model Routing Guidance
 
-# Models are selected by role capability, not by maximum power.
+# Models are selected by role capability, not maximum power.
 
 routing:
 
@@ -34,6 +34,16 @@ routing:
       - repetitive_checks
     preferred:
       - fast_reliable_model
+
+provider_mapping:
+  note: "Map capabilities to available providers in your environment."
+  examples:
+    - provider: Codex
+      mapping: "Use suitable reasoning/coding models available in Codex."
+    - provider: Claude
+      mapping: "Use suitable reasoning/coding models available in Claude Code."
+    - provider: Gemini
+      mapping: "Use suitable reasoning/coding models available in Gemini environments."
 
 policy:
   default_effort: balanced
