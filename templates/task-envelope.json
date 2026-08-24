@@ -1,0 +1,25 @@
+{
+  "task_id": "TASK-001",
+  "sender": "agent-name",
+  "recipient": "agent-name",
+  "type": "task",
+  "objective": "Describe the requested outcome",
+  "context": {
+    "current_state": [],
+    "constraints": [],
+    "evidence": []
+  },
+  "permissions": {
+    "allowed_actions": [],
+    "forbidden_actions": []
+  },
+  "expected_output": {
+    "format": "report",
+    "required_sections": [
+      "summary",
+      "findings",
+      "recommendations"
+    ]
+  },
+  "approval_required": false
+}
